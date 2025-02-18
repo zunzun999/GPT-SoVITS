@@ -408,7 +408,7 @@ def get_tts_wav(ref_wav_path, prompt_text, prompt_language, text, text_language,
     if prompt_text is None or len(prompt_text) == 0:
         ref_free = True
     t0 = ttime()
-    print("see dict language: " dict_language)
+    print("see dict language: ", dict_language)
     prompt_language = dict_language[prompt_language]
     text_language = dict_language[text_language]
 
