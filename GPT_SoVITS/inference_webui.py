@@ -111,19 +111,34 @@ dict_language_v1 = {
     i18n("日英混合"): "ja",#按日英混合识别####不变
     i18n("多语种混合"): "auto",#多语种启动切分识别语种
 }
+# dict_language_v2 = {
+#     i18n("中文"): "all_zh",#全部按中文识别
+#     i18n("英文"): "en",#全部按英文识别#######不变
+#     i18n("日文"): "all_ja",#全部按日文识别
+#     i18n("粤语"): "all_yue",#全部按中文识别
+#     i18n("韩文"): "all_ko",#全部按韩文识别
+#     i18n("中英混合"): "zh",#按中英混合识别####不变
+#     i18n("日英混合"): "ja",#按日英混合识别####不变
+#     i18n("粤英混合"): "yue",#按粤英混合识别####不变
+#     i18n("韩英混合"): "ko",#按韩英混合识别####不变
+#     i18n("多语种混合"): "auto",#多语种启动切分识别语种
+#     i18n("多语种混合(粤语)"): "auto_yue",#多语种启动切分识别语种
+# }
+
 dict_language_v2 = {
-    i18n("中文"): "all_zh",#全部按中文识别
-    i18n("英文"): "en",#全部按英文识别#######不变
-    i18n("日文"): "all_ja",#全部按日文识别
-    i18n("粤语"): "all_yue",#全部按中文识别
-    i18n("韩文"): "all_ko",#全部按韩文识别
-    i18n("中英混合"): "zh",#按中英混合识别####不变
-    i18n("日英混合"): "ja",#按日英混合识别####不变
-    i18n("粤英混合"): "yue",#按粤英混合识别####不变
-    i18n("韩英混合"): "ko",#按韩英混合识别####不变
-    i18n("多语种混合"): "auto",#多语种启动切分识别语种
-    i18n("多语种混合(粤语)"): "auto_yue",#多语种启动切分识别语种
+    "Chinese": "all_zh",
+    "English": "en",
+    "Japanese": "all_ja",
+    "Cantonese": "all_yue",
+    "Korean": "all_ko",
+    "Chinese-English Mixed": "zh",
+    "Japanese-English Mixed": "ja",
+    "Cantonese-English Mixed": "yue",
+    "Korean-English Mixed": "ko",
+    "Multilingual Mixed": "auto",
+    "Multilingual Mixed (Cantonese)": "auto_yue",
 }
+
 dict_language = dict_language_v1 if version =='v1' else dict_language_v2
 
 tokenizer = AutoTokenizer.from_pretrained(bert_path)

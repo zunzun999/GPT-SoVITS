@@ -22,7 +22,7 @@ SOVITS_MODEL_PATH = os.path.join(current_dir, 'SoVITS_weights_v2', 'zudamon_styl
 
 # Define the inference function
 def synthesize(GPT_model_path, SoVITS_model_path, ref_audio_path, ref_text_path, ref_language, target_text_path, target_language, output_path):
-    i18n = I18nAuto()
+    # i18n = I18nAuto()
 
     # Read reference text
     with open(ref_text_path, 'r', encoding='utf-8') as file:
@@ -39,9 +39,9 @@ def synthesize(GPT_model_path, SoVITS_model_path, ref_audio_path, ref_text_path,
     # Generate audio
     synthesis_result = get_tts_wav(ref_wav_path=ref_audio_path, 
                                    prompt_text=ref_text, 
-                                   prompt_language=i18n(ref_language), 
+                                   prompt_language=ref_language, 
                                    text=target_text, 
-                                   text_language=i18n(target_language), 
+                                   text_language=target_language, 
                                    top_p=1, temperature=1)
     
     result_list = list(synthesis_result)
